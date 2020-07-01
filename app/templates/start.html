@@ -1,5 +1,22 @@
 {% extends 'base.html'%}
 
 {% block body%}
-Start page
+    <h2>All users and posts</h2>
+
+
+{%for user in users%}
+    <div class="card">{{user.id}} {{user.name}}
+        {% for post in posts%}
+            {% if user.id == post.userId %}
+            <div class="card-body">
+                {{post.id}} {{post.body}}
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+{% endfor%}
+
+
 {% endblock %}
+
