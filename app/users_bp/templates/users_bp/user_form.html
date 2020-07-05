@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <form method="POST" action="{{ url_for('users_bp.user_form') }}">
+        {% for input in form %}
+            <div>{{ input.label }}</div>
+            <div>{{ input }}</div>
+        {% endfor %}
+        <button type="submit" class="bg-success">send</button>
+    </form>
+
+    <div class="card">
+
+        <div class="card-body">
+            <div class="card-title">User Info</div>
+            <div class="card-text">
+                <div>Username: {{ username }}</div>
+                <div>Email: {{ email }}</div>
+                <div>Password: {{ password }}</div>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

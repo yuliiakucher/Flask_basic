@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block css_js_links %}
+    <link href="{{ url_for('posts.static', filename='css/style.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content_title %}
+    <h2 class="container">New Post</h2>
+{% endblock %}
+
+
+{% block body %}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Create new post!</h5>
+            <p class="card-text">
+            <p>name: {{ name }}</p>
+            <p>mail: {{ mail }}</p>
+            <form method="POST" action='{{ url_for("posts.new_post") }}'>
+                {% for input in form %}
+                    {{ input.label }}
+                    {{ input }}
+                {% endfor %}
+                <button type="submit">Submit</button>
+            </form>
+            </p>
+        </div>
+    </div>
+{% endblock %}

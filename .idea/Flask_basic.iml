@@ -9,9 +9,11 @@
     <orderEntry type="library" name="bootstrap" level="application" />
   </component>
   <component name="TemplatesService">
+    <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />
     <option name="TEMPLATE_FOLDERS">
       <list>
         <option value="$MODULE_DIR$/app/templates" />
+        <option value="$MODULE_DIR$/app/users_bp/templates" />
       </list>
     </option>
   </component>
