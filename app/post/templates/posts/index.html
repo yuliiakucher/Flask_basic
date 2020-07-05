@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block css_js_links %}
+    <link href="{{ url_for('posts.static', filename='css/style.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+    <h1>Posts</h1>
+    <form method="post"></form>
+{% endblock %}
