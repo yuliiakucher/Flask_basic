@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+            <ul class="list-group">
+                {% for k, v in owners.items() %}
+                    <li class="list-group-item active">{{ k }}</li>
+                    <li class="list-group-item">Name: {{ v.name }}</li>
+                    <li class="list-group-item">Age: {{ v.age }}</li>
+                    <li class="list-group-item">Type: {{ v.city }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}
