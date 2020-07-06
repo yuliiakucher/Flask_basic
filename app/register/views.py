@@ -44,4 +44,4 @@ def register_pet():
 @register.route('/single_owner')
 def single_owner():
 
-    return render_template('register/single_owner.html', owner=owners[request.values['k']] )
+    return render_template('register/single_owner.html')
